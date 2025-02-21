@@ -89,7 +89,7 @@
             </li>
         </ul>
     </div>
-    <div class="divider"><img src="assets/divider.svg"></div>
+    <div class="divider"></div>
 
     <div class="choose-wrap">
         <div class="choose-us content-wrap">
@@ -134,43 +134,51 @@
     </div>
     <div class="contact content-wrap">
         <h2>ready to get your prescription?</h2>
+
         <div class="email-form">
-            <h3>get in contact with us</h3>
+            <div class="email-head">
+                <h3>get in contact with us</h3>
+                <span class="iconify" data-icon="ic:round-close"></span>
+            </div>
             <form>
-                <label for="email">enter your email</label>
-                <input type="email" id="email" name="email">
-                <label for="message">message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your email message here..."
-                    required></textarea>
+                <div class="email-wrap">
+                    <label for="email">enter your email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="message-wrap">
+                    <label for="message">message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your email message here..."
+                        required></textarea>
+                </div>
                 <button type="submit" class="btn-primary">Submit</button>
             </form>
         </div>
     </div>
     <footer>
         <img src="assets/vertical-logo.svg">
-        <p>(c) 2025 iT rx All rights reserved</p>
-        <p>powered by: CyberMapache Co.</p>
+
 
         <div class="footer-content">
             <div class="footer-contact">
-                <p>contact us</p>
+                <p>contact us:</p>
                 <ul>
                     <li>
-                        <iconify-icon icon="solar:phone-calling-bold-duotone"></iconify-icon>
+                        <span class="iconify" data-icon="solar:phone-calling-bold-duotone"></span>
                         <p>713.252.1045</p>
                     </li>
                     <li>
-                        <iconify-icon icon="duo-icons:message-3"></iconify-icon>
+                        <span class="iconify" data-icon="duo-icons:message-3"></span>
                         <p>nmartinez@itprescription.com</p>
                     </li>
                     <li>
-                        <iconify-icon icon="duo-icons:world"></iconify-icon>
+                        <span class="iconify" data-icon="duo-icons:world"></span>
                         <p>www.itrx.com</p>
                     </li>
                 </ul>
             </div>
             <div class="footer-nav">
                 <nav>
+                    <p>Quicklinks:</p>
                     <ul>
                         <li><a href="#">
                                 <p>home</p>
@@ -187,6 +195,10 @@
                     </ul>
                 </nav>
             </div>
+        </div>
+        <div class="footer-copyright">
+            <p>(c) 2025 iT rx All rights reserved</p>
+            <p>powered by: CyberMapache Co.</p>
         </div>
     </footer>
 </body>

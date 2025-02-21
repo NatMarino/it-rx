@@ -247,9 +247,11 @@ h3 {
 
 .divider {
     width: 100%;
+    height: 140px;
+    background: var(--off-white) url("assets/divider2.svg") repeat-x center;
+    overflow: hidden;
+    background-size: 1654px auto;
     padding: 0;
-    margin: 0;
-    background-color: var(--off-white);
 }
 
 .choose-wrap {
@@ -315,6 +317,129 @@ h3 {
 .contact {
     background-color: var(--off-white);
     min-height: 50rem;
+    gap: 3rem;
+
 }
 
-.email-form {}
+.email-form {
+    border: .25rem solid var(--med-blue);
+    background-color: var(--white);
+    padding: 0;
+    gap: 5rem;
+    border-radius: .25rem;
+
+    .email-head {
+        font-size: 1.25rem;
+        background-color: var(--med-blue);
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+form {
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 70rem;
+    font-family: var(--font-silkscreen);
+    font-size: 1rem;
+    gap: 2rem;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-wrap,
+.message-wrap {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-left: .5rem;
+    }
+
+    textarea {
+        border-radius: 1rem;
+        border: .25rem solid var(--med-blue);
+        padding: 1rem;
+        font-family: var(--font-montserrat);
+        color: var(--black);
+    }
+
+    input {
+        border: .25rem solid var(--med-blue);
+        border-radius: 1rem;
+        height: 3rem;
+    }
+
+}
+
+.btn-primary {
+    background-color: var(--med-blue);
+    font-family: var(--font-silkscreen);
+    color: var(--black);
+    padding: 1rem 5rem;
+    width: fit-content;
+    border-radius: .5rem;
+    border: none;
+
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-silkscreen);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+
+    .footer-content {
+        padding: 0 4rem;
+        width: 100%;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    h4 {
+        font-weight: 100;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+
+        .iconify {
+            height: 1.5rem;
+            color: var(--light-green);
+        }
+    }
+
+    .footer-contact,
+    nav {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+        min-width: 15rem;
+    }
+
+    .footer-copyright {
+        font-size: .75rem;
+    }
+
+}

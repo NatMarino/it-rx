@@ -51,6 +51,8 @@ img {
 
 /* reset end --------------------------- */
 
+
+
 .iconify {
     font-size: 2rem;
     width: 2rem;
@@ -66,10 +68,28 @@ nav {
     flex-direction: row;
     align-items: flex-start;
     padding-left: 5rem;
+    position: relative;
 
     img {
         height: 4rem;
     }
+
+}
+
+.hamburger {
+    display: none !important;
+    background: var(--light-blue);
+    /* Keeps your blue background */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 70rem 0rem 0rem 70rem;
+
 }
 
 
@@ -91,6 +111,82 @@ nav {
     }
 }
 
+/* nav Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        width: 100%;
+
+        img {
+            padding-left: 5rem;
+        }
+    }
+
+    .hamburger {
+        display: flex !important;
+        justify-content: flex-end;
+
+        .iconify {
+            color: var(--black);
+            height: 100%;
+            width: 5rem;
+        }
+    }
+
+    .nav-items {
+        display: none;
+        /* Hide menu by default */
+        position: absolute;
+        top: 4rem;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    .nav-items.active {
+        display: flex;
+        background-color: var(--light-blue);
+        mix-blend-mode: multiply;
+        width: 15rem;
+        margin: auto;
+        align-items: flex-end;
+        justify-content: flex-end;
+        right: 0;
+        padding: 2rem 1rem;
+
+        /* Show menu when toggled */
+    }
+
+    .nav-items li {
+        font-family: var(--font-silkscreen);
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        color: var(--dark-blue);
+        position: relative;
+
+        /* Needed for pseudo-element layering */
+    }
+
+    /* Multiply effect when active */
+    .nav-items.active::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        /* Covers the entire li */
+        background-color: var(--light-blue);
+        /* Same color */
+        mix-blend-mode: multiply;
+
+    }
+}
+
 .content-wrap {
     min-height: 20rem;
     width: 100%;
@@ -105,6 +201,11 @@ h1 {
     font-family: var(--font-orbitron);
     font-size: 1rem;
     text-transform: capitalize;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 h2 {
@@ -126,6 +227,13 @@ h3 {
         height: 20rem;
     }
 
+    @media (max-width: 768px) {
+        img {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
     .action-btn {
         background-color: var(--dark-blue);
         color: var(--dark-blue);
@@ -140,6 +248,15 @@ h3 {
             padding: .25rem 2rem;
             border-radius: 999px;
         }
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    .action-btn {
+        font-size: 2rem;
+        border: .4rem solid var(--dark-blue);
     }
 }
 
@@ -243,6 +360,21 @@ h3 {
             gap: 1rem;
         }
     }
+
+
+}
+
+@media (max-width: 768px) {
+    .msp-info {
+        max-width: fit-content;
+        margin: 2rem;
+        justify-content: center;
+    }
+
+    .msp-items {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .divider {
@@ -279,6 +411,11 @@ h3 {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
 }
 
 .choose-header {
@@ -286,6 +423,10 @@ h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 }
 
 .reason {
@@ -315,10 +456,15 @@ h3 {
 }
 
 .contact {
-    background-color: var(--off-white);
     min-height: 50rem;
-    gap: 3rem;
+    background-color: var(--off-white);
+    gap: 2rem;
+    padding: 2rem;
 
+    @media (max-width: 750px) {
+        max-width: 70rem;
+        width: 100%;
+    }
 }
 
 .email-form {
@@ -327,6 +473,11 @@ h3 {
     padding: 0;
     gap: 5rem;
     border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 70rem;
+    width: 100%;
 
     .email-head {
         font-size: 1.25rem;
@@ -339,32 +490,48 @@ h3 {
     }
 }
 
+@media (max-width: 768px) {
+    .email-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact {
+        padding: 2rem 1rem;
+
+
+        h2 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
 form {
+    align-items: flex-end;
     padding: .5rem 1rem;
     display: flex;
     flex-direction: column;
-    min-width: 70rem;
+    max-width: 70rem;
     font-family: var(--font-silkscreen);
     font-size: 1rem;
     gap: 2rem;
-}
-
-.email-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 100%;
 }
 
 .email-wrap,
 .message-wrap {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     label {
+        width: 100%;
         margin-left: .5rem;
     }
 
     textarea {
+        width: 100%;
         border-radius: 1rem;
         border: .25rem solid var(--med-blue);
         padding: 1rem;
@@ -373,6 +540,7 @@ form {
     }
 
     input {
+        width: 100%;
         border: .25rem solid var(--med-blue);
         border-radius: 1rem;
         height: 3rem;
@@ -388,7 +556,6 @@ form {
     width: fit-content;
     border-radius: .5rem;
     border: none;
-
 }
 
 footer {
@@ -401,6 +568,7 @@ footer {
     align-items: center;
     gap: 2rem;
     padding: 4rem 0;
+    flex-wrap: wrap;
 
     .footer-content {
         padding: 0 4rem;
@@ -410,6 +578,22 @@ footer {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
+        flex-wrap: wrap;
+
+        @media (max-width: 750px) {
+            padding: 1rem;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    img {
+        max-width: 40rem;
+        width: 100%;
+        margin: 1rem;
     }
 
     h4 {
@@ -426,6 +610,12 @@ footer {
             height: 1.5rem;
             color: var(--light-green);
         }
+
+        @media (max-width: 750px) {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .footer-contact,
@@ -440,6 +630,16 @@ footer {
 
     .footer-copyright {
         font-size: .75rem;
+
+        @media (max-width: 750px) {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem;
     }
 
 }

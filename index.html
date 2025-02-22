@@ -17,6 +17,9 @@
 <body>
     <nav>
         <img src="assets/icon=rx-only.svg">
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="iconify" data-icon="ci:hamburger-md"></span>
+        </button>
         <ul class="nav-items">
             <li><a href="#">
                     <p>home</p>
@@ -34,7 +37,7 @@
     </nav>
 
     <div class="intro-header content-wrap">
-        <h1>Introducing your favorite houston msp:</h1>
+        <h1>Introducing your favorite houston MSP:</h1>
         <img src="assets/main-logo=Default.svg" alt="It Prescription; Houston-based it solutions">
         <div class="action-btn">
             <a href="#">About</a>
@@ -201,6 +204,20 @@
             <p>powered by: CyberMapache Co.</p>
         </div>
     </footer>
+
+    <!-- nav hamburger functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navItems = document.querySelector(".nav-items");
+
+            hamburger.addEventListener("click", function () {
+                navItems.classList.toggle("active");
+            });
+        });
+    </script>
+
+
 </body>
 
 

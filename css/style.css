@@ -729,12 +729,16 @@ a { text-decoration: none; color: inherit; }
   60% { transform: rotate(-2deg); }
   80% { transform: rotate(1deg); }
 }
-/* services card hover */
-.card { transition: transform .25s ease; }
-.card:hover { transform: translateY(-6px); }
+/* services card hover — only on devices with a real pointer, so taps
+   in the mobile carousel don't trigger a lift that its scroll
+   container would clip */
 .card .card__body { transition: border-color .25s ease, background .25s ease; }
-.card:hover .card__body { border-color: var(--blue); }
-.card:hover .card__head img { animation: wag .6s ease 1; }
+@media (hover: hover) and (pointer: fine) {
+  .card { transition: transform .25s ease; }
+  .card:hover { transform: translateY(-6px); }
+  .card:hover .card__body { border-color: var(--blue); }
+  .card:hover .card__head img { animation: wag .6s ease 1; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
@@ -865,7 +869,7 @@ a { text-decoration: none; color: inherit; }
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 16px;
-    padding: 0 8vw 8px;
+    padding: 10px 8vw 8px;
     margin-left: calc(-1 * clamp(20px, 4.7vw, 90px));
     margin-right: calc(-1 * clamp(20px, 4.7vw, 90px));
     scrollbar-width: none;

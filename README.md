@@ -24,6 +24,9 @@ python3 -m http.server 8080
 
 ## Status / placeholders
 
-- Contact form opens a `mailto:` draft (no backend yet)
+- Contact form delivers via FormSubmit (`formsubmit.co/ajax/...`) to the inquiries inbox;
+  the first-ever submission triggers a one-time activation email FormSubmit sends to that
+  inbox — click the link in it once, after which all inquiries deliver. Success state uses
+  the window component's submit variant. Append `#test-success` to the URL to preview it.
 - Login button is a placeholder
 - Services carousel on mobile is CSS scroll-snap with dots

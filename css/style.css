@@ -591,7 +591,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: 15px;
   padding: 12px 60px;
   min-width: min(428px, 100%);
-  text-align: right;
+  text-align: center;
   font-family: var(--font-pixel);
   font-size: clamp(16px, 1.25vw, 24px);
   color: #000;

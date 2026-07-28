@@ -589,8 +589,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--blue);
   border: 0;
   border-radius: 15px;
-  padding: 12px 60px;
-  min-width: min(428px, 100%);
+  padding: 12px 34px;
   text-align: center;
   font-family: var(--font-pixel);
   font-size: clamp(16px, 1.25vw, 24px);
@@ -910,7 +909,6 @@ a { text-decoration: none; color: inherit; }
   .window__content { border-width: 6px; }
   .field__input { height: 58px; border-width: 4px; }
   .field__input--area { height: 180px; }
-  .submit-btn { min-width: 0; width: 100%; text-align: center; }
 
   .footer__cols { flex-direction: column; gap: 44px; }
   .footer__line { font-size: 18px; word-break: break-all; }

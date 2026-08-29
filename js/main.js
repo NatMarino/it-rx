@@ -30,9 +30,19 @@ const grid = $('#services-grid');
 const dotsWrap = $('#services-dots');
 if (grid && dotsWrap) {
   const cards = Array.from(grid.children);
-  cards.forEach((_, i) => {
+  const setActiveDot = (idx) => {
+    dotsWrap.querySelectorAll('button').forEach((d, i) => {
+      d.classList.toggle('is-active', i === idx);
+      if (i === idx) d.setAttribute('aria-current', 'true');
+      else d.removeAttribute('aria-current');
+    });
+  };
+  cards.forEach((card, i) => {
     const dot = document.createElement('button');
-    if (i === 0) dot.classList.add('is-active');
+    dot.type = 'button';
+    const title = card.querySelector('.card__head h3');
+    dot.setAttribute('aria-label', title ? title.textContent : `service ${i + 1}`);
+    if (i === 0) { dot.classList.add('is-active'); dot.setAttribute('aria-current', 'true'); }
     dot.addEventListener('click', () => {
       cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     });
@@ -47,8 +57,7 @@ if (grid && dotsWrap) {
       const dist = Math.abs(mid - center);
       if (dist < best) { best = dist; nearest = i; }
     });
-    dotsWrap.querySelectorAll('button').forEach((d, i) =>
-      d.classList.toggle('is-active', i === nearest));
+    setActiveDot(nearest);
   }, { passive: true });
 }
 
@@ -94,10 +103,12 @@ if (contactForm) {
       contactForm.hidden = true;
       $('#contact-success').hidden = false;
       $('#window-title').textContent = 'Your prescription is being written!';
+      $('#contact-success .success-text').focus();
     } catch (err) {
       errorBox.hidden = false;
       submitBtn.disabled = false;
       submitBtn.textContent = 'submit';
+      submitBtn.focus();
     }
   });
 
@@ -107,14 +118,6 @@ if (contactForm) {
     $('#contact-success').hidden = false;
     $('#window-title').textContent = 'Your prescription is being written!';
   }
-
-  // Retro window close button — playful placeholder: collapse and bring it back
-  $('.window__close').addEventListener('click', () => {
-    const win = $('.window');
-    win.style.transition = 'opacity .25s ease';
-    win.style.opacity = '0';
-    setTimeout(() => { win.style.opacity = '1'; }, 1200);
-  });
 }
 
 // Floating scroll-to-top button
@@ -133,7 +136,7 @@ if (!reducedMotion && 'IntersectionObserver' in document.defaultView) {
   const targets = $$([
     '.section-title', '.brands__head', '.brands__sub', '.brands__row',
     '.trust__title', '.services__sub', '.card', '.services__cta-title',
-    '.experience__sub', '.triple__col', '.experience__creds', '.experience__hub',
+    '.experience__sub', '.triple__col', '.experience__creds',
     '.banner', '.scalable__title', '.mission__head', '.mission__intro',
     '.mission__photo', '.value', '.mission__outro', '.signup__title',
     '.signup__logo-row', '.window', '.cta', '.coming-soon__title', '.coming-soon__text',

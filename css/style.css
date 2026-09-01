@@ -17,6 +17,9 @@
   /* AA-contrast variants for text on --ink (see README redlines) */
   --green-lift: #4d8a66;
   --sage-lift: #6f958d;
+  /* focus ring colors: >10:1 against their surface */
+  --focus-on-dark: var(--blue);
+  --focus-on-light: var(--teal-deep);
 
   --font-display: "Racing Sans One", cursive;
   --font-pixel: "Silkscreen", monospace;
@@ -33,11 +36,44 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-mono);
-  overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; }
 a { text-decoration: none; color: inherit; }
+
+/* visible keyboard focus everywhere; dark-surface scopes override below */
+:focus-visible {
+  outline: 3px solid var(--focus-on-light);
+  outline-offset: 3px;
+}
+.navbar__burger:focus-visible,
+.navbar__links a:focus-visible,
+.login-btn:focus-visible,
+.services__body :focus-visible,
+.experience__body :focus-visible,
+.footer :focus-visible,
+.to-top:focus-visible {
+  outline-color: var(--focus-on-dark);
+}
+
+/* skip link — visually hidden until keyboard focus */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 0 0 12px 12px;
+}
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid var(--focus-on-dark);
+  outline-offset: 3px;
+}
 
 .container {
   max-width: 1740px;
@@ -377,14 +413,6 @@ a { text-decoration: none; color: inherit; }
   max-width: 1500px;
   margin: clamp(40px, 4vw, 76px) auto 0;
 }
-.experience__hub {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px 15px;
-  width: fit-content;
-  margin: clamp(30px, 3.2vw, 60px) auto 0;
-}
-.experience__hub img { display: block; width: clamp(280px, 29.6vw, 568px); }
 
 /* ============ WHY CHOOSE US ============ */
 .why { padding: clamp(50px, 4.4vw, 85px) 0 0; background: var(--paper); }
@@ -583,7 +611,7 @@ a { text-decoration: none; color: inherit; }
   padding: 20px 24px;
   resize: vertical;
 }
-.field__input:focus { outline: 3px solid var(--blue); }
+.field__input:focus { outline: 3px solid var(--focus-on-light); }
 .submit-btn {
   align-self: flex-end;
   background: var(--blue);
@@ -749,7 +777,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* grey placeholder text in form fields */
-.field__input::placeholder { color: #8a9a97; opacity: 1; }
+.field__input::placeholder { color: #5d6f6c; opacity: 1; }
 
 /* ============ LOGIN / COMING SOON PAGE ============ */
 .coming-soon { background: var(--paper); padding: clamp(50px, 5.2vw, 100px) 0 clamp(70px, 6.3vw, 120px); }
@@ -885,15 +913,17 @@ a { text-decoration: none; color: inherit; }
     gap: 10px;
     margin-top: 18px;
   }
+  /* 24×24 hit target (WCAG 2.5.8) around a 10px visual dot */
   .services__dots button {
-    width: 10px; height: 10px;
+    width: 24px; height: 24px;
     border-radius: 50%;
     border: 0;
     background: var(--sage-mid);
-    padding: 0;
+    background-clip: content-box;
+    padding: 7px;
     cursor: pointer;
   }
-  .services__dots button.is-active { background: var(--blue); }
+  .services__dots button.is-active { background-color: var(--blue); }
 
   .triple { grid-template-columns: 1fr; gap: 44px; }
   .why__banners { grid-template-columns: 1fr; gap: 24px; }

@@ -1,0 +1,105 @@
+/* ============================================================
+   ITRX design tokens — imported from the claude.ai/design
+   "itrx-design-system" project (colors, typography, spacing,
+   effects). Values are the design system's, unchanged.
+   Consumed by css/site.css. The legacy css/style.css does NOT
+   use these; it still serves login.html and 404.html.
+   ============================================================ */
+
+/* ---------- color ---------- */
+:root{
+  /* base */
+  --ink:#151514;          /* near-black: navbar blob, dark bands, footer */
+  --paper:#f2f2f2;        /* page background */
+  --white:#ffffff;
+  --green:#3f7857;        /* brand green (main) */
+  --mint:#7ec284;         /* light green accent */
+  --sage:#45625e;         /* dark blue-green (main) */
+  --sage-soft:#557374;
+  --teal-deep:#243b3d;    /* darkest blue */
+  --teal-ink:#1a2d2f;     /* saturated dark blue — pill/card heads on ink */
+  --blue:#a3d2d5;         /* med blue (main) */
+  --blue-pale:#c2dee1;    /* light blue (main) */
+  --error:#a03123;
+  --placeholder:#5d6f6c;
+  /* AA-contrast lifts for text on --ink */
+  --green-lift:#4d8a66;
+  --sage-lift:#6f958d;
+}
+
+/* ---------- type ---------- */
+:root{
+  --font-display:"Racing Sans One",cursive;
+  --font-pixel:"Silkscreen",monospace;
+  --font-mono:"IBM Plex Mono",monospace;
+
+  --type-hero:clamp(56px,7vw,120px);
+  --type-section:clamp(46px,5.4vw,92px);
+  --type-cta-title:clamp(36px,4.6vw,76px);
+  --type-pixel-lg:clamp(18px,1.5vw,24px);
+  --type-pixel-md:clamp(15px,1.2vw,19px);
+  --type-body-lg:clamp(16px,1.2vw,19px);
+  --lh-display:1.1;
+  --lh-body:1.5;
+  --lh-body-loose:1.6;
+}
+
+/* ---------- shape, spacing, motion ---------- */
+:root{
+  --radius-pill:999px;
+  --radius-card:30px;
+  --radius-field:15px;
+  --radius-input:10px;     /* owner redline: form fields sit squarer than cards */
+  --radius-hero:0 0 55px 0;
+  --radius-sm:10px;
+
+  --border-card:3px;
+  --border-field:6px;
+  --border-window:10px;
+
+  --nav-h:84px;            /* sticky nav height; the ink bar fills it */
+  --container-max:1320px;
+  --container-pad:clamp(20px,4.7vw,90px);
+  --section-gap:clamp(56px,6vw,96px);
+  --band-pad:clamp(40px,4.5vw,80px) var(--container-pad) clamp(56px,6vw,100px);
+
+  --ease:ease;
+  --dur-fast:.2s;
+  --dur:.25s;
+  --dur-slow:.35s;
+  --dur-reveal:.6s;
+
+  /* sticker outline behind display text on imagery */
+  --outline-text:-3px -3px 0 #fff,3px -3px 0 #fff,-3px 3px 0 #fff,3px 3px 0 #fff,
+                 -4px 0 0 #fff,4px 0 0 #fff,0 -4px 0 #fff,0 4px 0 #fff,
+                 -3px 0 6px #fff,3px 0 6px #fff;
+}
+
+/* ---------- effects (v2 refresh) ---------- */
+:root{
+  /* gradients — one hue family, or a step to a neighbour */
+  --grad-ink:linear-gradient(100deg,#151514 0%,#1a2d2f 100%);
+  --grad-teal:linear-gradient(135deg,#2a4446 0%,#1a2d2f 100%);
+  --grad-sage:linear-gradient(160deg,#50706b 0%,#45625e 45%,#34504d 100%);
+  --grad-green:linear-gradient(135deg,#4d8a66 0%,#3f7857 55%,#356a4c 100%);
+  --grad-green-hover:linear-gradient(135deg,#56946f 0%,#3f7857 100%);
+  --grad-blue:linear-gradient(135deg,#c2dee1 0%,#a3d2d5 100%);
+  --grad-blue-hover:linear-gradient(135deg,#d4e8ea 0%,#b4dadd 100%);
+  --grad-mint-blue:linear-gradient(90deg,#7ec284 0%,#a3d2d5 100%);
+  --grad-paper:linear-gradient(180deg,#f7f8f8 0%,#f2f2f2 100%);
+  --grad-glow-ink:radial-gradient(45% 22% at 50% 30%,rgba(63,120,87,.28) 0%,rgba(21,21,20,0) 100%);
+  --grad-glow-top:radial-gradient(50% 60% at 50% 0%,rgba(163,210,213,.10) 0%,rgba(21,21,20,0) 100%);
+
+  /* glows — dark surfaces only, blue or green, never white/neon */
+  --glow-focus:0 0 0 4px rgba(163,210,213,.45);
+
+  /* light-surface depth */
+  --shadow-soft:0 0 0 1px rgba(163,210,213,.55),0 1px 2px rgba(36,59,61,.06),0 6px 16px -10px rgba(69,98,94,.25);
+  --shadow-lift:0 0 0 1px rgba(163,210,213,.9),0 0 26px rgba(163,210,213,.5);
+  --shadow-window:0 0 36px rgba(163,210,213,.4);
+
+  /* grain overlays */
+  --grain-paper:url("../assets/grain-paper.svg");
+  --grain-light:url("../assets/grain-light.svg");
+  --grain-dark:url("../assets/grain-dark.svg");
+}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IT Prescription (ITRX) — IT Procurement &amp; Technology Solutions for the Public Sector | Houston, TX</title>
-<meta name="description" content="IT Prescription helps Texas public-sector and small-business organizations choose, source, and deploy the right technology — procurement plus the engineering that makes it run. Based in Houston, serving North Houston, Spring, and Conroe.">
+<title>IT Procurement &amp; Solutions | IT Prescription (ITRX)</title>
+<meta name="description" content="Houston-based IT procurement and technology solutions for Texas public sector and small business — sourcing plus the engineering that makes it run.">
 <link rel="canonical" href="https://www.itprescription.com/">
 <meta name="theme-color" content="#151514">
 <meta property="og:type" content="website">
@@ -24,7 +24,6 @@
   "logo": "https://www.itprescription.com/assets/logo-nav.svg",
   "image": "https://www.itprescription.com/assets/og-cover.jpg",
   "description": "IT Prescription helps Texas public-sector and small-business organizations choose, source, and deploy the right technology — procurement plus the engineering that makes it run. Based in Houston, serving North Houston, Spring, and Conroe.",
-  "telephone": "+1-713-252-1045",
   "email": "nmartinez@itprescription.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US" },
   "areaServed": ["Houston TX", "North Houston TX", "Spring TX", "Conroe TX"]
@@ -32,302 +31,448 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Racing+Sans+One&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero-bg.webp" type="image/webp">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Racing+Sans+One&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-bg.webp" type="image/webp" media="(min-width:901px)">
+<link rel="preload" as="image" href="assets/hero-bg-960.webp" type="image/webp" media="(max-width:900px)">
 <link rel="icon" href="assets/pill-favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="css/style.css">
+<script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js" defer></script>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
+
 <a class="skip-link" href="#top">Skip to content</a>
 
-<!-- ============ NAVBAR ============ -->
-<header class="navbar">
-  <a class="navbar__logo" href="#top" aria-label="ITRX home">
-    <img src="assets/logo-nav.svg" alt="ITRX logo" width="153" height="91">
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a class="nav__logo" href="/" aria-label="ITRX home">
+    <img src="assets/logo-nav.svg" alt="" width="153" height="91"><span class="nav__wordmark">ITRX</span>
   </a>
-  <div class="navbar__bar">
-    <nav class="navbar__links" id="nav-links">
-      <a href="#top">home</a>
-      <a href="#mission">about</a>
-      <a href="#contact">contact us</a>
+  <div class="nav__bar">
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link is-active" href="/" aria-current="page">home</a>
+      <a class="nav__link" href="technology-procurement.html">technology procurement</a>
+      <a class="nav__link" href="services.html">services</a>
+      <a class="nav__link" href="about.html">about</a>
     </nav>
-    <a class="login-btn" href="login.html">
-      <span>Login</span>
-      <img src="assets/icon-login.svg" alt="" width="34" height="34">
+    <a class="nav__quote nav__quote--wide" href="request-a-quote.html">
+      <span>start your quote</span>
+      <span class="nav__quote-ic"><iconify-icon class="ic" icon="tabler:pill-filled" width="18" height="18" aria-hidden="true"></iconify-icon></span>
     </a>
-    <button class="navbar__burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+    <a class="nav__quote nav__quote--narrow" href="request-a-quote.html">quote</a>
+    <button class="nav__burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-drop">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <nav class="nav__drop" id="nav-drop" aria-label="Primary (mobile)">
+    <a href="/">home</a>
+    <a href="technology-procurement.html">technology procurement</a>
+    <a href="services.html">services</a>
+    <a href="about.html">about</a>
+  </nav>
 </header>
 
 <main id="top">
 
   <!-- ============ HERO ============ -->
   <section class="hero">
+    <div class="hero__sky" aria-hidden="true"></div>
+    <div class="hero__photo" aria-hidden="true"></div>
+    <div class="hero__ring hero__ring--a" aria-hidden="true"></div>
+    <div class="hero__ring hero__ring--b" aria-hidden="true"></div>
+
     <div class="hero__inner">
-      <img class="hero__logo" src="assets/logo-hero.svg" alt="ITRX" width="712" height="242">
-      <h1 class="hero__title outline-text">IT Solutions For Organizations &amp;<br class="hero__br"> Local Government</h1>
-    </div>
-    <div class="hero__wave" aria-hidden="true">
-      <img src="assets/hero-wave.svg" alt="" width="1920" height="210">
-    </div>
-  </section>
-
-  <!-- ============ FEATURED BRANDS ============ -->
-  <section class="brands">
-    <div class="container">
-      <div class="brands__head">
-        <img src="assets/icon-circuit.svg" alt="" width="86" height="86" loading="lazy" decoding="async">
-        <h2 class="brands__title">Featured Brands</h2>
-      </div>
-      <p class="brands__sub">ITRX doctor recommended for a healthy business*</p>
-      <div class="brands__grid">
-        <div class="brands__row">
-          <img src="assets/brand-fortinet.svg"    alt="Fortinet"    class="brand brand--fortinet" width="477" height="82" loading="lazy" decoding="async">
-          <img src="assets/brand-halcyon.png"     alt="Halcyon"     class="brand brand--halcyon" width="965" height="220" loading="lazy" decoding="async">
+      <div class="hero__copy">
+        <div class="hero__badge">
+          <iconify-icon class="ic" icon="solar:map-point-bold-duotone" width="18" height="18" aria-hidden="true"></iconify-icon>
+          <span>serving north houston, spring &amp; conroe</span>
         </div>
-        <div class="brands__row">
-          <img src="assets/brand-carahsoft.png"   alt="Carahsoft"   class="brand brand--carahsoft" width="743" height="197" loading="lazy" decoding="async">
-          <img src="assets/brand-xcitium.png"     alt="Xcitium"     class="brand brand--xcitium" width="927" height="165" loading="lazy" decoding="async">
-          <img src="assets/brand-darktrace.png"   alt="Darktrace"   class="brand brand--darktrace" width="953" height="114" loading="lazy" decoding="async">
-        </div>
-        <div class="brands__row">
-          <img src="assets/brand-crowdstrike.png" alt="CrowdStrike" class="brand brand--crowdstrike" width="827" height="553" loading="lazy" decoding="async">
-          <img src="assets/brand-dell.png"        alt="Dell"        class="brand brand--dell" width="471" height="446" loading="lazy" decoding="async">
-          <img src="assets/brand-microsoft.png"   alt="Microsoft"   class="brand brand--microsoft" width="1066" height="600" loading="lazy" decoding="async">
-        </div>
-      </div>
-      <p class="brands__note">*Note: ITRX Staff are not medical professionals</p>
-    </div>
-  </section>
-
-  <!-- ============ TRUST CTA ============ -->
-  <section class="trust">
-    <div class="container">
-      <h2 class="trust__title">Reliable Support, Customized IT Solutions And Cybersecurity You Can Trust</h2>
-      <a class="cta cta--dark" href="#contact">
-        <span class="cta__body">
-          <span class="cta__iconwrap">
-            <img class="cta__icon cta__icon--closed" src="assets/icon-pill.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-            <img class="cta__icon cta__icon--open" src="assets/icon-pill-open.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-          </span>
-          <span class="cta__label">Contact us!</span>
-        </span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section class="services">
-    <div class="wave wave--top" aria-hidden="true"><img src="assets/wave-top.svg" alt="" width="1920" height="225" loading="lazy" decoding="async"></div>
-    <div class="services__body">
-      <div class="container">
-        <h2 class="section-title section-title--green">Services We Offer</h2>
-        <p class="services__sub">An overview of our solutions; each case is unique, so we tailor a customized approach to meet your specific needs.</p>
-
-        <div class="services__grid" id="services-grid">
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-pills.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>managed it support</h3></header>
-            <div class="card__body"><p>Our managed IT support ensures your systems run smoothly with proactive monitoring and rapid issue resolution. We provide comprehensive tech solutions tailored to your business needs.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-shield.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>cybersecurity</h3></header>
-            <div class="card__body"><p>We offer robust cybersecurity solutions, including threat detection, data encryption, and security audits. Protect your business from evolving cyber threats with our expert services.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-cloud.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>cloud services</h3></header>
-            <div class="card__body"><p>Leverage our cloud services for scalable, secure, and cost-effective IT infrastructure. We provide seamless migration, management, and optimization of your cloud environment.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-usb.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>network monitoring</h3></header>
-            <div class="card__body"><p>Our network monitoring services provide real-time visibility and proactive management of your network infrastructure. We identify and resolve issues quickly, ensuring optimal performance and security.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-code.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>ai consulting &amp; development</h3></header>
-            <div class="card__body"><p>Harness the power of AI with our expert consulting and development services. We tailor AI solutions to drive innovation, optimize processes, and unlock new opportunities for your business.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-storm.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>backup and recovery</h3></header>
-            <div class="card__body"><p>Ensure business continuity with our comprehensive backup and disaster recovery solutions. We safeguard your critical data and systems, minimizing downtime and data loss.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-router.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>hardware procurement</h3></header>
-            <div class="card__body"><p>Simplify your hardware procurement process with our expert guidance and competitive pricing. We source and configure the right hardware solutions to meet your specific business requirements.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-phone.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>voip / communications</h3></header>
-            <div class="card__body"><p>Enhance communication and collaboration with our VoIP solutions. We offer reliable, feature-rich VoIP systems tailored to your business needs, improving productivity and reducing costs.</p></div>
-          </article>
-          <article class="card">
-            <header class="card__head"><img src="assets/icon-law.svg" alt="" width="40" height="40" loading="lazy" decoding="async"><h3>compliance support</h3></header>
-            <div class="card__body"><p>Navigate complex regulatory requirements with our compliance support services. We help you implement and maintain industry-specific compliance standards, reducing risk and ensuring peace of mind.</p></div>
-          </article>
-        </div>
-        <div class="services__dots" id="services-dots"></div>
-
-        <div class="services__cta">
-          <h2 class="services__cta-title">Want To Discuss Your Customized Solution?</h2>
-          <a class="cta cta--green" href="#contact">
-            <span class="cta__body">
-              <span class="cta__iconwrap">
-            <img class="cta__icon cta__icon--closed" src="assets/icon-pill.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-            <img class="cta__icon cta__icon--open" src="assets/icon-pill-open.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-          </span>
-              <span class="cta__label">Contact us!</span>
+        <h1 class="hero__title">IT Solutions For Organizations &amp; <em>Local Government</em></h1>
+        <p class="hero__lede">A Houston technology provider that sources the hardware, software and licensing you need, then configures and supports selected solutions. You work with a person the whole way.</p>
+        <div class="hero__actions">
+          <a class="pill pill--dark" href="request-a-quote.html">
+            <span>start your quote</span>
+            <span class="pill__ic">
+              <img class="pill__pill pill__pill--closed" src="assets/icon-pill.svg" alt="" width="26" height="26">
+              <img class="pill__pill pill__pill--open" src="assets/icon-pill-open.svg" alt="" width="26" height="26">
             </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__aside">
+        <div class="slip" aria-label="Example prescription slip">
+          <div class="slip__perf" aria-hidden="true"></div>
+          <div class="slip__body">
+            <div class="slip__frame">
+              <div class="center">
+                <div class="slip__brand">IT Prescription</div>
+                <div class="slip__meta">houston-based it solutions · itprescription.com</div>
+              </div>
+              <div class="slip__rule" aria-hidden="true"></div>
+              <div class="slip__grid">
+                <span>for</span><span class="slip__val">Public Works Dept.</span>
+                <span>date</span><span class="slip__val">Sept. 24, 2026</span>
+              </div>
+              <div class="slip__rx-row">
+                <span class="slip__rx" aria-hidden="true">℞</span>
+                <div class="slip__lines">
+                  <div class="slip__line">
+                    <span class="slip__qty">24×</span>
+                    <span class="slip__item">business laptops</span>
+                    <span class="slip__tag">configured</span>
+                  </div>
+                  <div class="slip__line">
+                    <span class="slip__qty">2×</span>
+                    <span class="slip__item">firewall appliances</span>
+                    <span class="slip__tag">+ deploy</span>
+                  </div>
+                  <div class="slip__line">
+                    <span class="slip__qty">1×</span>
+                    <span class="slip__item">Microsoft 365</span>
+                    <span class="slip__tag">annual</span>
+                  </div>
+                </div>
+              </div>
+              <div class="slip__foot">
+                <div style="flex:1">
+                  <div class="slip__sig">Dr. ITRX</div>
+                  <div class="slip__refill">refills: as needed</div>
+                </div>
+                <div class="slip__stamp">scoped<br>with you<br>✓</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="bens" aria-label="Why it's easy">
+          <li class="ben">
+            <span class="ben__ic"><iconify-icon class="ic" icon="solar:bill-list-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+            <span class="ben__txt"><span class="ben__t">itemized quotes</span><span class="ben__d">Every product and service priced on its own line.</span></span>
+          </li>
+          <li class="ben">
+            <span class="ben__ic"><iconify-icon class="ic" icon="solar:document-add-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+            <span class="ben__txt"><span class="ben__t">purchase orders welcome</span><span class="ben__d">Buy the way your office already does.</span></span>
+          </li>
+          <li class="ben">
+            <span class="ben__ic"><iconify-icon class="ic" icon="solar:user-check-rounded-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+            <span class="ben__txt"><span class="ben__t">one person, start to finish</span><span class="ben__d">The same contact from first question to delivery.</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <img class="hero__wave" src="assets/hero-wave.svg" alt="" width="1920" height="210">
+  </section>
+
+  <!-- ============ BRANDS ============ -->
+  <section class="brands" data-reveal>
+    <div style="max-width:var(--container-max);margin:0 auto">
+      <div class="brands__head">
+        <div>
+          <div class="eyebrow">
+            <iconify-icon class="ic" icon="tabler:pill-filled" width="20" height="20" aria-hidden="true"></iconify-icon>
+            <span>the catalog</span>
+          </div>
+          <h2 class="display display--sage" style="margin-top:12px">Brands We Source</h2>
+        </div>
+        <p class="brands__note">Name-brand hardware, software and licensing, quoted against what you actually need. Don't see yours? Ask.</p>
+      </div>
+      <div class="brands__row">
+        <span class="brand-pill">Fortinet</span>
+        <span class="brand-pill">Dell</span>
+        <span class="brand-pill">Microsoft</span>
+        <span class="brand-pill">CrowdStrike</span>
+        <span class="brand-pill">Darktrace</span>
+        <span class="brand-pill">Halcyon</span>
+        <span class="brand-pill">Xcitium</span>
+        <span class="brand-pill brand-pill--more">+ more on request</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT GOES ============ -->
+  <section class="how" data-reveal>
+    <img class="wave wave--top" src="assets/wave-top-grain.svg" alt="" width="1920" height="225" loading="lazy" decoding="async">
+    <div class="band-dark">
+      <div class="blob blob--how" aria-hidden="true"></div>
+      <div class="band-dark__inner">
+        <div class="how__head">
+          <div class="eyebrow eyebrow--mint">
+            <iconify-icon class="ic" icon="tabler:pill-filled" width="20" height="20" aria-hidden="true"></iconify-icon>
+            <span>we speak fluent tech-ese</span>
+          </div>
+          <h2 class="display display--grad">You'll Talk To Someone Who Knows The Tech</h2>
+          <p class="lede" style="max-width:62ch">The person who answers your question is the same person who configures the equipment. We ask about what you already run, catch problems before anything ships, and explain your options in plain language.</p>
+        </div>
+
+        <div class="how__grid">
+          <div class="how__cells">
+            <div class="cell">
+              <span class="cell__ic"><iconify-icon class="ic" icon="solar:plug-circle-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+              <h3>compatibility first</h3>
+              <p>We check new equipment against what you already run, down to firmware versions and license tiers.</p>
+            </div>
+            <div class="cell">
+              <span class="cell__ic"><iconify-icon class="ic" icon="solar:ruler-angular-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+              <h3>right-sized, not upsold</h3>
+              <p>Specs are matched to the workload, so you are not paying for capacity you will never use.</p>
+            </div>
+            <div class="cell">
+              <span class="cell__ic"><iconify-icon class="ic" icon="solar:key-minimalistic-square-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+              <h3>licensing untangled</h3>
+              <p>Renewals, seat counts and subscription tiers sorted out before anything lapses.</p>
+            </div>
+            <div class="cell">
+              <span class="cell__ic"><iconify-icon class="ic" icon="solar:chat-round-line-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+              <h3>plain-language answers</h3>
+              <p>We lay out the tradeoffs clearly, so you can make the call with confidence.</p>
+            </div>
+          </div>
+
+          <div class="chat">
+            <div class="chat__bar">
+              <div class="chat__who">
+                <span class="chat__avatar"><img src="assets/logo-nav.svg" alt="" width="26" height="16"></span>
+                <div>
+                  <div class="chat__name">your itrx contact</div>
+                  <div class="chat__loc">North Houston</div>
+                </div>
+              </div>
+              <button class="chat__replay" type="button" id="chat-replay">
+                <iconify-icon class="ic" icon="solar:restart-bold" width="14" height="14" aria-hidden="true"></iconify-icon>replay
+              </button>
+            </div>
+            <div class="chat__log" id="chat-log" role="log" aria-live="polite" tabindex="0" aria-label="Example conversation"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="wave wave--bottom" src="assets/wave-bottom-grain.svg" alt="" width="1920" height="225" loading="lazy" decoding="async">
+  </section>
+
+  <!-- ============ TWO WAYS WE HELP ============ -->
+  <section class="twoway" data-reveal>
+    <div style="max-width:var(--container-max);margin:0 auto">
+      <div class="eyebrow">
+        <iconify-icon class="ic" icon="tabler:pill-filled" width="20" height="20" aria-hidden="true"></iconify-icon>
+        <span>what we do</span>
+      </div>
+      <h2 class="display" style="margin-top:12px">Two Ways We Help</h2>
+      <div class="twoway__grid">
+        <a class="wcard" href="technology-procurement.html">
+          <div class="gpill">
+            <span class="gpill__ic"><iconify-icon class="ic" icon="solar:box-bold-duotone" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+            <span>we source it</span>
+          </div>
+          <p>Laptops, servers, network gear, security appliances, software and licensing. We quote against what you actually need and handle the ordering from there.</p>
+          <span class="wcard__more">technology procurement →</span>
+        </a>
+        <a class="wcard" href="services.html">
+          <div class="gpill">
+            <span class="gpill__ic"><iconify-icon class="ic" icon="solar:settings-bold-duotone" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+            <span>we make it run</span>
+          </div>
+          <p>Configuration, deployment and ongoing support for selected solutions, so the equipment you buy is working the day it arrives.</p>
+          <span class="wcard__more">services →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES + EXPERIENCE ============ -->
+  <section class="svcs" data-reveal style="margin-top:var(--section-gap)">
+    <img class="wave wave--top" src="assets/wave-top-grain.svg" alt="" width="1920" height="225" loading="lazy" decoding="async">
+    <div class="band-dark">
+      <div class="blob blob--svc-a" aria-hidden="true"></div>
+      <div class="blob blob--svc-b" aria-hidden="true"></div>
+      <div class="band-dark__inner">
+
+        <div class="center">
+          <h2 class="display display--grad">Services We Offer</h2>
+          <p class="svcs__sub">ITRX doctor recommended for a healthy business*</p>
+        </div>
+
+        <div class="svcs__grid carousel">
+          <article class="svc">
+            <div class="svc__head">
+              <iconify-icon class="ic" icon="solar:screencast-2-bold-duotone" width="34" height="34" aria-hidden="true"></iconify-icon>
+              <h3>managed it support</h3>
+            </div>
+            <div class="svc__body"><p>We keep your systems patched, monitored and documented so small problems stay small. Your team gets one place to call when something isn't right.</p></div>
+          </article>
+          <article class="svc">
+            <div class="svc__head">
+              <iconify-icon class="ic" icon="solar:shield-network-bold-duotone" width="34" height="34" aria-hidden="true"></iconify-icon>
+              <h3>cybersecurity</h3>
+            </div>
+            <div class="svc__body"><p>We offer threat detection, data encryption and security audits. Protect your organization from evolving threats with tools we deploy and manage.</p></div>
+          </article>
+          <article class="svc">
+            <div class="svc__head">
+              <iconify-icon class="ic" icon="solar:cloud-storm-bold-duotone" width="34" height="34" aria-hidden="true"></iconify-icon>
+              <h3>cloud services</h3>
+            </div>
+            <div class="svc__body"><p>Migrations, Microsoft 365 and cloud backup, planned around how your people actually work. We move you when it makes sense, not before.</p></div>
+          </article>
+        </div>
+
+        <div class="svcs__cta">
+          <a class="pill pill--arrow" href="services.html">
+            <span>all services</span>
+            <span class="pill__ic"><iconify-icon class="ic pill__arrow" icon="solar:arrow-right-linear" width="22" height="22" aria-hidden="true"></iconify-icon></span>
+          </a>
+        </div>
+
+        <hr class="rule">
+
+        <div class="center">
+          <h2 class="display display--grad">Experience You Can Trust</h2>
+          <p class="lede" style="max-width:62ch;margin-left:auto;margin-right:auto">We are a local team that works with public-sector buyers and small businesses across North Houston. We know the process on your side of the purchase order as well as ours.</p>
+        </div>
+
+        <div class="trio carousel">
+          <div class="trio__col">
+            <img class="trio__ic" src="assets/icon-government-solid.svg" alt="" width="278" height="278" loading="lazy" decoding="async">
+            <h3>experienced with local government</h3>
+            <p>Cities, counties, school districts and special districts. We quote in the format your purchasing office expects.</p>
+          </div>
+          <div class="trio__col">
+            <img class="trio__ic" src="assets/icon-brain-solid.svg" alt="" width="278" height="278" loading="lazy" decoding="async">
+            <h3>industry professionals</h3>
+            <p>Engineers who configure what they sell, so the recommendation and the installation come from the same people.</p>
+          </div>
+          <div class="trio__col">
+            <img class="trio__ic" src="assets/icon-texas-solid.svg" alt="" width="278" height="278" loading="lazy" decoding="async">
+            <h3>quality customer service</h3>
+            <p>Straight answers, clear quotes and a real person who picks up the phone and follows the job through.</p>
+          </div>
+        </div>
+
+        <p class="creds">Our employees combine deep credentials with proven leadership, bachelor's and master's degrees, over 45 vendor certifications spanning domains such as Cisco, Schneider, Microsoft, and EC-Council, plus seasoned consulting experience and prior CIO/GCIO roles guiding enterprise and public-sector technology strategy.</p>
+
+      </div>
+    </div>
+    <img class="wave wave--bottom" src="assets/wave-bottom-grain.svg" alt="" width="1920" height="225" loading="lazy" decoding="async">
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="why" data-reveal>
+    <div style="max-width:var(--container-max);margin:0 auto">
+      <div class="center">
+        <h2 class="display display--green">Why Choose Us?</h2>
+      </div>
+      <div class="why__grid carousel">
+        <div class="ycard">
+          <span class="ycard__ic"><iconify-icon class="ic" icon="solar:map-point-wave-bold-duotone" width="32" height="32" aria-hidden="true"></iconify-icon></span>
+          <h3>local presence &amp; personalized service</h3>
+          <p>We're based here, we work here, and we tailor every recommendation to the organization in front of us.</p>
+        </div>
+        <div class="ycard">
+          <span class="ycard__ic"><iconify-icon class="ic" icon="solar:cpu-bolt-bold-duotone" width="32" height="32" aria-hidden="true"></iconify-icon></span>
+          <h3>at the forefront of innovation</h3>
+          <p>We keep up with what's new so you don't have to, and we only recommend it when it earns its place.</p>
+        </div>
+        <div class="ycard">
+          <span class="ycard__ic"><iconify-icon class="ic" icon="solar:document-text-bold-duotone" width="32" height="32" aria-hidden="true"></iconify-icon></span>
+          <h3>built for the public-sector buying process</h3>
+          <p>Itemized quotes, purchase orders and the paperwork your finance office asks for, handled without back-and-forth.</p>
+        </div>
+      </div>
+      <div class="why__banners">
+        <div class="bcard">
+          <div class="gpill">
+            <span class="gpill__ic"><iconify-icon class="ic" icon="solar:phone-calling-rounded-bold-duotone" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+            <span>a local team you can reach</span>
+          </div>
+          <p>Call or email and you'll reach someone who knows your account, in the same part of Texas you are.</p>
+        </div>
+        <div class="bcard">
+          <div class="gpill">
+            <span class="gpill__ic"><iconify-icon class="ic" icon="solar:sort-by-time-bold-duotone" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+            <span>proactive maintenance</span>
+          </div>
+          <p>Regular updates, health checks and lifecycle planning, so replacements are budgeted before they become emergencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cband" data-reveal>
+    <div class="cband__inner">
+      <div class="cband__ring cband__ring--a" aria-hidden="true"></div>
+      <div class="cband__ring cband__ring--b" aria-hidden="true"></div>
+      <div class="cband__body">
+        <h2 class="display">Ready To Have A Scalable And Secure IT Solution?</h2>
+        <p class="cband__sub">Tell us what you're working with and where you want to get to. We'll come back with a plan and a quote.</p>
+        <div class="cband__actions">
+          <a class="pill pill--dark" href="request-a-quote.html">
+            <span>start your quote</span>
+            <span class="pill__ic">
+              <img class="pill__pill pill__pill--closed" src="assets/icon-pill.svg" alt="" width="26" height="26" loading="lazy">
+              <img class="pill__pill pill__pill--open" src="assets/icon-pill-open.svg" alt="" width="26" height="26" loading="lazy">
+            </span>
+          </a>
+          <a class="pill pill--ghost" href="mailto:nmartinez@itprescription.com">
+            <iconify-icon class="ic" icon="solar:letter-bold-duotone" width="22" height="22" aria-hidden="true"></iconify-icon>
+            <span>or contact us</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="experience">
-    <div class="experience__body">
-      <div class="container">
-        <h2 class="section-title section-title--green">Experience You Can Trust</h2>
-        <p class="experience__sub">As an experienced MSP, we know how to deliver top-notch IT support tailored to your needs.</p>
-        <div class="triple">
-          <div class="triple__col">
-            <img src="assets/icon-government.svg" alt="" class="triple__icon" width="278" height="278" loading="lazy" decoding="async">
-            <h3 class="triple__title">Experienced With<br>Local Government</h3>
-            <p>Our extensive experience collaborating with local governments ensures strict adherence to all required protocols and processes, making us a trusted IT partner for complex projects.</p>
-          </div>
-          <div class="triple__col">
-            <img src="assets/icon-brain.svg" alt="" class="triple__icon" width="278" height="278" loading="lazy" decoding="async">
-            <h3 class="triple__title">Industry<br>Professionals</h3>
-            <p>As industry experts, we provide clear, reliable information on our products and installation services tailored to your organization.</p>
-          </div>
-          <div class="triple__col">
-            <img src="assets/icon-texas.svg" alt="" class="triple__icon" width="278" height="278" loading="lazy" decoding="async">
-            <h3 class="triple__title">Quality<br>Customer Service</h3>
-            <p>Based in Houston, Texas, we ensure seamless communication and timely support for your IT needs. Our goal is to provide you with the best service experience possible.</p>
-          </div>
-        </div>
-        <p class="experience__creds">Our employees combine deep credentials with proven leadership, bachelor's and master's degrees, over 45 vendor certifications spanning domains such as Cisco, Schneider, Microsoft, and EC-Council, plus seasoned consulting experience and prior CIO/GCIO roles guiding enterprise and public-sector technology strategy.</p>
-      </div>
-    </div>
-    <div class="wave wave--bottom" aria-hidden="true"><img src="assets/wave-bottom.svg" alt="" width="1920" height="225" loading="lazy" decoding="async"></div>
-  </section>
-
-  <!-- ============ WHY CHOOSE US ============ -->
-  <section class="why">
-    <div class="container">
-      <h2 class="section-title section-title--ink">Why Choose Us?</h2>
-      <div class="triple triple--dark">
-        <div class="triple__col">
-          <img src="assets/icon-texas-dark.svg" alt="" class="triple__icon" width="278" height="278" loading="lazy" decoding="async">
-          <h3 class="triple__title">local presence &amp; personalized service</h3>
-          <p>Serving North Houston, Spring, and Conroe, we provide personalized IT solutions with quick, face-to-face support, tailored for smaller government agencies and SMBs who value dedicated service over generic, high-volume providers.</p>
-        </div>
-        <div class="triple__col">
-          <img src="assets/icon-deepfake.svg" alt="" class="triple__icon" width="278" height="278" loading="lazy" decoding="async">
-          <h3 class="triple__title">at the forefront of innovation</h3>
-          <p>We stand out in the IT world by providing AI-powered cybersecurity, cloud computing, and managed IT services—solutions that are highly sought after. As businesses embrace digital transformation, our expertise in these areas makes us a forward-thinking partner you can trust.</p>
-        </div>
-      </div>
-      <div class="why__banners">
-        <div class="banner">
-          <div class="banner__pill">
-            <span class="banner__icon"><img src="assets/icon-time.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span>
-            <span>Fast response times</span>
-          </div>
-          <p>We are dedicated to delivering your custom IT solution — and that includes fast response times in <strong>your time zone</strong>.</p>
-        </div>
-        <div class="banner">
-          <div class="banner__pill">
-            <span class="banner__icon"><img src="assets/icon-screencast.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span>
-            <span>Proactive Maintenance</span>
-          </div>
-          <p>We make sure your systems stay up-to-date and functioning correctly, so you can focus on your organization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SCALABLE CTA ============ -->
-  <section class="scalable">
-    <div class="container">
-      <h2 class="scalable__title">Ready To Have A Scalable And Secure IT Solution?</h2>
-      <a class="cta cta--green" href="#contact">
-        <span class="cta__body">
-          <span class="cta__iconwrap">
-            <img class="cta__icon cta__icon--closed" src="assets/icon-pill.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-            <img class="cta__icon cta__icon--open" src="assets/icon-pill-open.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
-          </span>
-          <span class="cta__label">Contact us!</span>
-        </span>
-      </a>
-    </div>
-  </section>
-
   <!-- ============ MISSION ============ -->
-  <section class="mission" id="mission">
-    <div class="container">
-      <div class="mission__head">
-        <h2 class="mission__title">Our Mission</h2>
-        <p class="mission__sub">Who we are and what we believe</p>
-      </div>
-      <p class="mission__intro">At IT Prescription, we empower State, Local, and Education (SLED) organizations with tailored, high-quality IT solutions that streamline the technology procurement process. Through strategic partnerships with leading vendors and a commitment to exceptional service, we equip our clients with the tools, expertise, and support they need to enhance operational efficiency and foster innovation. IT Prescription's mission is to be a trusted partner in our clients' success, ensuring access to secure, reliable, and scalable IT solutions that address their unique needs.</p>
-    </div>
+  <section class="mission" id="mission" data-reveal>
     <div class="mission__row">
-      <img class="mission__photo" src="assets/mission-photo.jpg" alt="Server racks with network cabling" width="1400" height="681" loading="lazy" decoding="async">
-      <div class="mission__values">
-        <div class="value">
-          <h3>Honesty &amp; integrity</h3>
-          <p>We prioritize transparent communication by guiding clients through complex IT decisions with clarity and trust. Our team ensures every step is clear, making the process smooth and understandable. We believe that open dialogue builds strong partnerships and successful outcomes.</p>
+      <img class="mission__photo" src="assets/mission-photo.webp" alt="Server racks with network cabling" width="1400" height="681" loading="lazy" decoding="async">
+      <div class="mission__copy">
+        <div class="eyebrow">
+          <iconify-icon class="ic" icon="tabler:pill-filled" width="20" height="20" aria-hidden="true"></iconify-icon>
+          <span>who we are</span>
         </div>
-        <div class="value">
-          <h3>innovation</h3>
-          <p>Our passion for innovation drives us to provide cutting-edge solutions that adapt to evolving needs. We constantly explore new technologies to stay ahead and deliver exceptional value. This commitment ensures our clients always receive the most effective and forward-thinking services.</p>
-        </div>
-        <div class="value">
-          <h3>community</h3>
-          <p>Our commitment to community fosters a collaborative environment, empowering both clients and team members to achieve success together. This shared dedication creates a space where ideas flourish and support is always available. Together, we build stronger connections that drive lasting results.</p>
-        </div>
+        <h2 class="display display--sage" style="margin-top:12px">Our Mission</h2>
+        <p>We started IT Prescription to give local organizations the kind of technology partner larger enterprises take for granted: one that listens first, prescribes what fits, and stays accountable after the sale.</p>
+        <p>At IT Prescription, we empower State, Local, and Education (SLED) organizations with tailored, high-quality IT solutions that streamline the technology procurement process. Through strategic partnerships with leading vendors and a commitment to exceptional service, we equip our clients with the tools, expertise, and support they need to enhance operational efficiency and foster innovation. IT Prescription's mission is to be a trusted partner in our clients' success, ensuring access to secure, reliable, and scalable IT solutions that address their unique needs.</p>
+        <a class="mission__link" href="about.html">about itrx →</a>
       </div>
-    </div>
-    <div class="container">
-      <p class="mission__outro">IT Prescription is recognized for delivering high-quality, cost-effective IT solutions tailored to the unique needs of State, Local, and Education (SLED) organizations. We strive to be approachable experts, providing reliable products, services, and ongoing support. Our reputation has been built on efficiency, deep expertise, and a strong commitment to customer satisfaction, making IT procurement simpler and stress-free for our clients.</p>
     </div>
   </section>
 
-  <!-- ============ CONTACT / SIGN UP ============ -->
-  <section class="signup" id="contact">
-    <div class="container">
-      <h2 class="signup__title">Ready To Get Your</h2>
-      <div class="signup__logo-row">
-        <img src="assets/logo-full.svg" alt="IT Prescription — Houston-based IT Solutions" class="signup__logo" width="1242" height="179" loading="lazy" decoding="async">
-        <span class="signup__q">?</span>
-      </div>
-      <div class="window" id="contact-window">
+  <!-- ============ CLOSING WINDOW / CONTACT ============ -->
+  <section class="closing" id="contact" data-reveal>
+    <div class="closing__inner">
+      <h2 class="closing__title">
+        <span>Ready To Get Your</span>
+        <img class="closing__logo" src="assets/logo-full.svg" alt="IT Prescription" width="1242" height="179" loading="lazy" decoding="async">
+        <span>?</span>
+      </h2>
+      <div class="window">
         <div class="window__bar">
-          <div class="window__bar-title">
-            <img src="assets/icon-mail.svg" alt="" width="34" height="34" loading="lazy" decoding="async">
-            <span id="window-title">Get In Contact With Us!</span>
+          <div class="window__title">
+            <iconify-icon class="ic" icon="solar:hand-pills-bold-duotone" width="28" height="28" aria-hidden="true"></iconify-icon>
+            <span>let's write you a prescription</span>
           </div>
+          <span class="window__x" aria-hidden="true">✕</span>
         </div>
-        <form class="window__content" id="contact-form" novalidate>
-          <label class="field">
-            <span class="field__label">enter your email</span>
-            <input class="field__input" type="email" name="email" required autocomplete="email" placeholder="you@organization.com">
-          </label>
-          <label class="field">
-            <span class="field__label">MESSAGE</span>
-            <textarea class="field__input field__input--area" name="message" rows="6" required placeholder="Tell us a bit about your organization and what you need help with..."></textarea>
-          </label>
-          <p class="form-error" id="form-error" role="status" aria-live="polite" hidden>Something went wrong sending your message — please email us directly at <a href="mailto:nmartinez@itprescription.com">nmartinez@itprescription.com</a>.</p>
-          <button class="submit-btn" type="submit">submit</button>
-        </form>
-        <div class="window__content window__content--success" id="contact-success" role="status" aria-live="polite" hidden>
-          <div class="success-row">
-            <img src="assets/icon-mailbox.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
-            <p class="success-text" tabindex="-1">Thanks for reaching out!<br>We will be in touch soon.</p>
+        <div class="window__body">
+          <p class="window__lede">Tell us what you need and we'll scope it with you.</p>
+          <p class="window__sub">A person reads every request.</p>
+
+          <div style="margin-top:28px;display:flex;justify-content:center">
+            <a class="pill pill--dark" href="request-a-quote.html">
+              <span>start your quote</span>
+              <span class="pill__ic">
+                <img class="pill__pill pill__pill--closed" src="assets/icon-pill.svg" alt="" width="26" height="26" loading="lazy">
+                <img class="pill__pill pill__pill--open" src="assets/icon-pill-open.svg" alt="" width="26" height="26" loading="lazy">
+              </span>
+            </a>
           </div>
-          <span class="submit-btn submit-btn--done">submitted!</span>
+
+          <p class="window__alt">or email nmartinez@itprescription.com</p>
         </div>
       </div>
     </div>
@@ -336,31 +481,53 @@
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container">
-    <img src="assets/logo-full.svg" alt="IT Prescription — Houston-based IT Solutions" class="footer__logo" width="1242" height="179" loading="lazy" decoding="async">
-    <div class="footer__cols">
-      <div class="footer__contact">
-        <p class="footer__eyebrow">The doctor is in!<br>Make an appointment now:</p>
-        <a class="footer__line" href="tel:+17132521045"><img src="assets/icon-tel.svg" alt="" width="36" height="36" loading="lazy" decoding="async"><span>713. 252. 1045</span></a>
-        <a class="footer__line" href="mailto:nmartinez@itprescription.com"><img src="assets/icon-msg.svg" alt="" width="36" height="36" loading="lazy" decoding="async"><span>nmartinez@itprescription.com</span></a>
-        <a class="footer__line" href="https://www.itprescription.com"><img src="assets/icon-world.svg" alt="" width="36" height="36" loading="lazy" decoding="async"><span>www.itprescription.com</span></a>
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__top">
+      <img class="foot__logo" src="assets/logo-full.svg" alt="IT Prescription — Houston-based IT Solutions" width="1242" height="179" loading="lazy" decoding="async">
+      <p class="foot__doctor">The doctor is in!<br>Make an appointment now:</p>
+    </div>
+
+    <div class="foot__cols">
+      <div class="foot__col foot__col--contact">
+        <div class="foot__h">contact</div>
+        <a class="foot__line foot__line--break" href="mailto:nmartinez@itprescription.com"><img src="assets/icon-msg.svg" alt="" width="26" height="26" loading="lazy">nmartinez@itprescription.com</a>
+        <a class="foot__line foot__line--sm" href="https://www.itprescription.com"><img src="assets/icon-world.svg" alt="" width="26" height="26" loading="lazy">www.itprescription.com</a>
+        <div class="foot__area">North Houston · Spring · Conroe</div>
       </div>
-      <div class="footer__links">
-        <p class="footer__eyebrow">quicklinks</p>
-        <a href="#top">home</a>
-        <a href="#mission">who are we?</a>
-        <a href="#contact">contact us</a>
+
+      <div class="foot__col">
+        <div class="foot__h">quicklinks</div>
+        <a class="foot__link" href="/">home</a>
+        <a class="foot__link" href="technology-procurement.html">technology procurement</a>
+        <a class="foot__link" href="services.html">services</a>
+        <a class="foot__link" href="about.html">about</a>
+      </div>
+
+      <div class="foot__col">
+        <div class="foot__h">company</div>
+        <a class="foot__link" href="request-a-quote.html">start your quote</a>
+        <span class="foot__link foot__link--soon">capability statement · soon</span>
+        <a class="foot__link" href="privacy.html">privacy</a>
+        <span class="foot__soon" aria-disabled="true" title="Client portal coming soon">
+          <iconify-icon class="ic" icon="solar:lock-keyhole-minimalistic-bold-duotone" width="14" height="14" aria-hidden="true"></iconify-icon>
+          <span>client login · soon</span>
+        </span>
       </div>
     </div>
-    <p class="footer__copy">© 2026 IT RX. All rights reserved.</p>
+
+    <div class="foot__bar">
+      <span>© 2026 IT RX. All rights reserved.</span>
+      <span>*Note: ITRX Staff are not medical professionals</span>
+    </div>
   </div>
 </footer>
 
-<button class="to-top" id="to-top" aria-label="Scroll to the top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+<button class="to-top" id="to-top" type="button" aria-label="Scroll to the top">
+  <iconify-icon class="ic" icon="solar:arrow-up-linear" width="20" height="20" aria-hidden="true"></iconify-icon>
   <span class="to-top__label">scroll to the top</span>
 </button>
-<script src="js/main.js"></script>
+
+<script src="js/site.js" defer></script>
 </body>
 </html>

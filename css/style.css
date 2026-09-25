@@ -948,3 +948,14 @@ a { text-decoration: none; color: inherit; }
   .footer__line { font-size: 18px; word-break: break-all; }
   .footer__links a { font-size: 20px; }
 }
+
+
+/* Client portal is not live: login is presentational, never a link. */
+.login-btn--soon {
+  background: transparent;
+  border: 1px dashed rgba(111, 149, 141, .6);
+  color: var(--blue-pale);
+  opacity: .75;
+  cursor: not-allowed;
+}
+.login-btn--soon img { opacity: .7; }

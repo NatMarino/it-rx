@@ -1,0 +1,6 @@
+# Internal working notes and agent config stay out of the deployed branch:
+# GitHub Pages serves this repository verbatim, so anything committed here is
+# publicly fetchable at itprescription.com/<path>.
+docs/
+.claude/
+CLAUDE.md
